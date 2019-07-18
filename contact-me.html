@@ -4,62 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>About Me</title>
+    <title>Contact Me</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
     <div class="whole">
 
-        <div class="header">
-            <div class="logo">
-                <img src="images/jc.png" alt="jones consolidated logo" class="logo-pic">
+      <div class="header row">
+        <div class="logo col-1">
+            <img src="images/jc.png" alt="jones consolidated logo" class="logo-pic">
+        </div>
+        <div class="col-11">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-end col-3">
+                    <a class="navbar-brand" href="#"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+            
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Welcome</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about-me.html">About-Me</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="contact-me.html">Contact-Me</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </nav>
+        </div>
+    </div>
+<!-- use class="is-valid" for fields and class="valid-feedback" -->
+        <div class="container">
+          <h2 class="display-">Please Fill Out the Form Below</h2>
+          <div class="row mt-4">
+            <div class="col-6">
+                <form id="myForm" novalidate>
+                  <div class="form-row">
+                    <div class="form-group col-6">
+                      <label for="firstName">First Name</label>
+                      <input type="text" class="form-control" id="firstName" placeholder="First Name" onfocusout="validateFirstName()">
+                      <!-- <div class=""></div> -->
+                      <small class="form-text text-muted"></small>
+                    </div>
+      
+                    <div class="form-group col-6">
+                      <label for="lastName">Last Name</label>
+                      <input type="text" class="form-control" id="lastName" placeholder="Last Name" onfocusout="validateLastName()">
+                      <!-- <div class=""></div> -->
+                      <small class="form-text text-muted"></small>
+                    </div>
+                  </div>
+      
+                  <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-control" placeholder="Email Address" onfocusout="validateEmail()">
+                    <!-- <div class=""></div> -->
+                    <small class="form-text text-muted"></small>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea name="Message" id="message" rows="3" class="form-control" onfocusout="validateMessage()"></textarea>
+                    <!-- <div class=""></div> -->
+                    <small class="form-text text-muted"></small>
+
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
             </div>
-    
-            <div class="navbar">
-                <div class="welcome"><a href="index.html">Welcome</a></div>
-                <div class="about-me"><a href="about-me.html">About Me</a></div>
-                <div class="contact-me"><a href="contact-me.html">Contact Me</a></div>
+
+            <div class="col-6">
+              <img src="images/contact-me.jpg" width="100%">
             </div>
+            
+  
+          </div>
         </div>
 
-        <div class="forms">
-            <h2>Please Fill Out the Form Below</h2>
-            <form>
-
-                <label for="fullname">Full Name</label>
-                <input type="text" name="fullname" class="form-control" placeholder="Enter full name">
-                
-                <label for="email">Email</label>
-                <input type="email" name="email" class="form-control" placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                
-                <label for="message">Your Message Here..</label>
-                <textarea name="message" class="form-control" rows="3"></textarea>
-                <button type="submit" class="btn btn-primary">Submit</button>
-
-                <!-- <div class="form-group">
-                  <label for="exampleInputEmail1">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button> -->
-              </form>
-
-        </div>
+        
 
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="script.js"></script>
 
 </body>
